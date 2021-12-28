@@ -10,6 +10,14 @@ void FillArray(int[] array)
     }
 }
 
+void PrintRndArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
 int j = 0;
 int[] EvenNumbers(int[] array)
 {
@@ -26,14 +34,6 @@ int[] EvenNumbers(int[] array)
     return array2;
 }
 
-void PrintRndArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-}
-
 void PrintEvenArray(int[] array)
 {
     for (int i = 0; i < j; i++)
@@ -45,6 +45,8 @@ void PrintEvenArray(int[] array)
 int[] RndArray = new int[10];
 
 FillArray(RndArray);
+System.Console.WriteLine("Целочисленный массив случайных чисел: ");
 PrintRndArray(RndArray);
 System.Console.WriteLine();
+System.Console.WriteLine("Массив из отобранных чётных чисел: ");
 PrintEvenArray(EvenNumbers(RndArray));
